@@ -20,6 +20,11 @@ variable "billing_code" {
   description = "(Required) Billing code for network resources"
 }
 
+variable "playbook_repository" {
+  type        = string
+  description = "(Required) URI of Ansible playbook repository."
+}
+
 # Application variables
 
 variable "ip_range" {
