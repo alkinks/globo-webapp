@@ -20,11 +20,6 @@ variable "billing_code" {
   description = "(Required) Billing code for network resources"
 }
 
-variable "playbook_repository" {
-  type        = string
-  description = "(Required) URI of Ansible playbook repository."
-}
-
 # Application variables
 
 variable "ip_range" {
@@ -39,21 +34,26 @@ variable "instance_type" {
 
 variable "api_key_secret_id" {
   type        = string
-  description = "(Required) Secret ID for the API key for web app to talk to SaaS platform."
+  description = "(Required) Secret ID for API key for web app to talk to SaaS platform."
+}
+
+variable "playbook_repository" {
+  type        = string
+  description = "(Required) URL of Ansible playbook repository."
 }
 
 variable "ec2_role_name" {
   type        = string
-  description = "(Required) Role Name of EC2 instance"
+  description = "(Required) Name of role to associate with EC2 instance profile."
 }
 
-#TFC variables
+# TFC variables
 variable "tfe_organization" {
   type        = string
-  description = "(Required) Name of TFC organization"
+  description = "(Required) Name of TFC organization."
 }
 
 variable "tfe_workspace_name" {
   type        = string
-  description = "(Required) Name of networking namespace to get information."
+  description = "(Required) Name of networking workspace to get information."
 }
